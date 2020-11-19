@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
+:root {
+  --primaryColor: #fafafa;
+  --secondaryColor: #f0f0f0;
+  --darkTextColor: #333;
+  --accentColor: #ffae42;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +18,7 @@ html {
 }
 
 body {
-  background-color: #fafafa;
+  background-color: var(--primaryColor);
   line-height: 1.5rem;
   letter-spacing: 0.1rem;
 }
@@ -32,7 +39,7 @@ body {
 }
 
 .nav > .container > ul > li > a {
-  color: black;
+  color: var(--darkTextColor);
   text-decoration: none;
   font-size: 1.2rem;
   cursor: pointer;
@@ -40,7 +47,7 @@ body {
 }
 
 .nav > .container > ul > li > a:hover {
-  color: #ffae42;
+  color: var(--accentColor);
 }
 
 .brand {
@@ -50,14 +57,14 @@ body {
 
 .summary-box {
   width: 100%;
-  background: #f0f0f0;
+  background: var(--secondaryColor);
   padding: 1rem;
   border-radius: 5px;
   margin: 0 auto;
 }
 
 .line-summary {
-  border-bottom: 5px solid #ffae42;
+  border-bottom: 5px solid var(--accentColor);
   max-width: 50px;
   margin: 1rem 0;
 }
@@ -108,18 +115,18 @@ body {
 
 .project > .bg > ul > li > a {
   text-decoration: none;
-  color: #ffae42;
+  color: var(--accentColor);
   transition: all 0.2s;
   cursor: pointer;
 }
 
 .project > .bg > ul > li > a:hover {
-  color: white;
+  color: var(--primaryColor);
 }
 
 .project > .bg > .title {
   font-weight: 500;
-  color: white;
+  color: var(--primaryColor);
 }
 
 .contact {
@@ -141,33 +148,33 @@ body {
 
 .contact > ul > li > a {
   text-decoration: none;
-  color: black;
+  color: var(--darkTextColor);
   transition: all 0.2s;
   cursor: pointer;
   font-size: 1.25rem;
 }
 
 .contact > ul > li > a:hover {
-  color: #ffae42;
+  color: var(--accentColor);
 }
 
 footer {
   width: 100%;
-  height: 50px;
-  background-color: #f0f0f0;
+  height: 75px;
+  background-color: var(--secondaryColor);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .line {
-  border-bottom: 5px solid #ffae42;
+  border-bottom: 5px solid var(--accentColor);
   max-width: 50px;
   margin: 1rem auto;
 }
 
 .orange {
-  color: #ffae42;
+  color: var(--accentColor);
 }
 
 @media only screen and (min-width: 518px) and (max-width: 991px) {
@@ -179,5 +186,9 @@ footer {
 @media only screen and (max-width: 768px) {
   .profile-pic {
     margin: 1rem;
+  }
+
+  .contact > ul > li {
+    margin-top: 1rem;
   }
 }
